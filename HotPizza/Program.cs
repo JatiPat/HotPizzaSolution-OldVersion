@@ -1,3 +1,6 @@
+using HotPizza.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace HotPizza
 {
     public class Program
@@ -8,7 +11,9 @@ namespace HotPizza
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-
+            builder.Services.AddDbContext<PizzaContext>(options => 
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+           
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
