@@ -22,5 +22,20 @@ namespace HotPizza.Controllers
         {
             return View();
         }
+
+        [HttpPost] //Http post for create method
+        public IActionResult Create(Style newStyle)
+        {
+            if(ModelState.IsValid) {
+                _context.Styles.Add(newStyle); //add new style and save it. Then redirect to index
+                _context.SaveChanges();
+                return RedirectToAction("Index", "Style");
+            }
+            else //invaild inputs
+            {
+                return View();
+            }
+        }
+
     }
 }
