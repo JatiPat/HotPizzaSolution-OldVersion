@@ -2,7 +2,7 @@
 
 namespace HotPizza.Models
 {
-    public class Category
+    public class Style
     {
         [Key] //I know I don't need to add this, but it's always useful for readablity
         public int Id { get; set; }
