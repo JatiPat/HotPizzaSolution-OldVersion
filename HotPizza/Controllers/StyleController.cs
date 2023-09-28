@@ -26,6 +26,12 @@ namespace HotPizza.Controllers
         [HttpPost] //Http post for create method
         public IActionResult Create(Style newStyle)
         {
+           var dupCheck = _context.Styles.Find(newStyle.DisplayOrder);
+            if (dupCheck != null) //stops users from adding same display order numbers
+            {
+                ModelState.AddModelError("displayOrder", "No duplicates for display order");
+            }
+
             if(ModelState.IsValid) {
                 _context.Styles.Add(newStyle); //add new style and save it. Then redirect to index
                 _context.SaveChanges();
