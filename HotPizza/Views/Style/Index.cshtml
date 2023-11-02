@@ -19,8 +19,9 @@
 <table class="table">
     <thead>
         <tr>
-        <th>Order Number</th>
+        <th>Display Order</th>
         <th>Pizza Styles</th>
+        <th></th>
         </tr>
     </thead>
     <tbody>
@@ -28,7 +29,17 @@
         <tr>
             
             <td>@item.DisplayOrder</td>
-                <td> @item.Name</td>
+            <td> @item.Name</td>
+            <td>
+                <div class="w-75 btn-group" role="group">
+                    <a asp-controller="Style" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary mx-2">
+                            <i class="bi bi-pencil-square"></i> Edit
+                    </a>
+                        <a asp-controller="Style" asp-action="Delete" class="btn btn-secondary mx-2">
+                            <i class="bi bi-trash3"></i> Delete
+                        </a>
+                </div>
+            </td>
         </tr>
         }
     </tbody>

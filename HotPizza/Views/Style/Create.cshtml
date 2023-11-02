@@ -8,7 +8,7 @@
 <hr />
 <div class="row">
         <form asp-action="Create">
-            <div asp-validation-summary="All" class="text-danger"></div>
+            <div asp-validation-summary="All" class="text-danger"></div> @*Summary can be All, ModelOnly, or None*@
             <div class="form-group pb-2">
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />
@@ -34,6 +34,6 @@
 
 
 
-@section Scripts {
+@section Scripts { @*Client side validation from jquery*@
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
