@@ -35,6 +35,7 @@ namespace HotPizza.Controllers
             if(ModelState.IsValid) {
                 _context.Styles.Add(newStyle); //add new style and save it. Then redirect to index
                 _context.SaveChanges();
+                TempData["passed"] = "Pizza Style Created!";
                 return RedirectToAction("Index", "Style");
             }
             else //invaild inputs
@@ -68,6 +69,7 @@ namespace HotPizza.Controllers
             {
                 _context.Styles.Update(editStyle); //only thing needed here is to update the object and save changes
                 _context.SaveChanges();
+                TempData["passed"] = "Pizza Style Edited!";
             }
 
             return RedirectToAction("Index", "Style");
@@ -102,6 +104,7 @@ namespace HotPizza.Controllers
             }
             _context.Styles.Remove(style); //removing object
             _context.SaveChanges();
+            TempData["passed"] = "Pizza Style Deleted!";
             return RedirectToAction("Index", "Style");
         }
     }
