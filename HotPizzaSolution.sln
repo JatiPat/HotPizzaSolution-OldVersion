@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotPizza.DataAccess", "HotP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotPizza.Models", "HotPizza.Models\HotPizza.Models.csproj", "{2AD2F875-A4CE-4066-B549-25E7F740B36E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotPizza.Utlity", "HotPizza.Utlity\HotPizza.Utlity.csproj", "{003D415B-A98D-4FFE-A7B2-BDC16048CB41}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotPizza.Utility", "HotPizza.Utlity\HotPizza.Utility.csproj", "{003D415B-A98D-4FFE-A7B2-BDC16048CB41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

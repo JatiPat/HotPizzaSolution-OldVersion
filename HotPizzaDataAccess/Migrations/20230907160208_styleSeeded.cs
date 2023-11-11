@@ -4,7 +4,7 @@
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace HotPizza.Migrations
+namespace HotPizza.DataAccess.Migrations
 {
     /// <inheritdoc />
     public partial class styleSeeded : Migration

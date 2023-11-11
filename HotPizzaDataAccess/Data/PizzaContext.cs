@@ -1,7 +1,7 @@
 ﻿using HotPizza.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace HotPizza.Data
+namespace HotPizza.DataAccess.Data
 {
     public class PizzaContext : DbContext
     {

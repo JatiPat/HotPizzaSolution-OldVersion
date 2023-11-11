@@ -1,4 +1,4 @@
-using HotPizza.Data;
+using HotPizza.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace HotPizza
