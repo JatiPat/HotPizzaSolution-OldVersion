@@ -29,6 +29,10 @@ namespace HotPizza.Models
         [ForeignKey("StyleId")]
         public Style Style { get; set; }
 
+        public int CompanyId { get; set; }
+        [ForeignKey("CompanyId")]
+        public Company Company { get; set; }
+
 
     }
 }

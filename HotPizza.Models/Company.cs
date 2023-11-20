@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,9 @@ namespace HotPizza.Models
         public string? Address { get; set; }
         public string? City { get; set; }
         public string? State { get; set; }
+        [DisplayName("Postal Code")] //For Display in Create page
         public string? PostalCode { get; set; }
+        [DisplayName("Phone Number")] //For Display in Create page
         public string? PhoneNumber { get; set; }
 
     }
