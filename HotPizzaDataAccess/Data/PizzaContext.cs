@@ -11,6 +11,7 @@ namespace HotPizza.DataAccess.Data
         }
 
         public DbSet<Style> Styles { get; set; } //must be public to access in StyleController
+        public DbSet<Pizza> Pizzas { get; set; } //must be public to access in StyleController
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) //Method used to seed data into SQL
         {
