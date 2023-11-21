@@ -65,7 +65,7 @@ namespace HotPizza.Controllers
         [HttpPost]
         public IActionResult Edit(Style editStyle)
         {
-            if (editStyle != null && ModelState.IsValid) 
+            if (editStyle is not null && ModelState.IsValid) 
             {
                 _context.Styles.Update(editStyle); //only thing needed here is to update the object and save changes
                 _context.SaveChanges();
@@ -86,7 +86,7 @@ namespace HotPizza.Controllers
             Style? styleFromDb = _context.Styles.Find(id); //find can only look for the primary key
             //Style? styleFromDb1 = _context.Styles.FirstOrDefault(u => u.Id == id); //firstordeafault using LINQ and can search for other varaibles 
             //Style? styleFromDb2 = _context.Styles.Where(u => u.Id == id).FirstOrDefault(); //Where is used for calculation 
-            if (styleFromDb == null)
+            if (styleFromDb is null)
             {
                 return NotFound();
             }
@@ -98,7 +98,7 @@ namespace HotPizza.Controllers
         public IActionResult DeletePOST(int? id)
         {
             Style? style = _context.Styles.Find(id);
-            if (style == null)
+            if (style is null)
             {
                 return BadRequest();
             }
